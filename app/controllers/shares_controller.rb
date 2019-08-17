@@ -3,11 +3,11 @@ class SharesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @shares = Share.all
+    @shares = Share.includes(:user).all
   end
 
   def show
-    @share = Share.find(params[:id])
+    @share = Share.includes(:user).find(params[:id])
   end
 
   def new
