@@ -22,4 +22,64 @@
       color: blue;
     }
   }
+
+  .pagination {
+    display: inline-block;
+  }
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  .pagination a.current {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  .pagination a:hover:not(.current) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  .pagination a, .pagination span.current, .pagination span.gap {
+    float: left;
+    padding: 0 14px;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: white;
+  }
+  .pagination {
+    border-left: 1px solid #ddd;
+    .first{
+      padding : 0;
+      float: none;
+      border: none;
+    }
+    .prev {
+      padding : 0;
+      float: none;
+      border: none;
+    }
+    .page{
+      padding : 0;
+      float: none;
+      border: none;
+    }
+    .next{
+      padding : 0;
+      float: none;
+      border: none;
+    }
+    .last{
+      padding : 0;
+      float: none;
+      border: none;
+    }
+    .current {
+      background-color: #4CAF50 !important;
+      color: white;
+      border-radius: 5px;
+    }
+  }
 }

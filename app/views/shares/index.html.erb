@@ -2,4 +2,6 @@
   <% @shares.each do |share| %>
     <%= render partial: 'share', locals: {share: share} %>
   <% end %>
+
+  <%= paginate @shares, window: 2, class: 'pagination' %>
 </div>
