@@ -1,5 +1,5 @@
 class SharesController < ApplicationController
-  before_action :set_share, only: [:show, :edit, :update, :destroy]
+  before_action :set_share, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -7,6 +7,7 @@ class SharesController < ApplicationController
   end
 
   def show
+    @share = Share.find(params[:id])
   end
 
   def new
