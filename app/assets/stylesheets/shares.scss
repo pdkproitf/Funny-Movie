@@ -1,6 +1,7 @@
 // Place all the styles related to the Shares controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .shares {
   .share {
     background-color: #fff;
@@ -20,6 +21,10 @@
     }
     .sharer {
       color: blue;
+    }
+    .description {
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 
