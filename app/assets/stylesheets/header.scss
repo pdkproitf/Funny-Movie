@@ -1,0 +1,43 @@
+/* Navbar and navigation styles */
+.navbar {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}
+.navbar-default {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #D9534F;
+  .navbar-nav > li > a {
+    color: #FFF;
+  }
+  .navbar-link {
+    color: #FFF;
+  }
+  .navbar-brand {
+    color: #FFF;
+    letter-spacing: 1.25px;
+    font-size: 2.1em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: #111;
+  }
+}

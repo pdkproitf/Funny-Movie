@@ -1,0 +1,19 @@
+<nav class="nav navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to(root_path, class: "navbar-brand") do %>
+        <span><i class="fa fa-home"></i></span>Hiptime
+      <% end %>
+    </div>
+    <ul>
+      <% if current_user.present? %>
+        <li><a> <%= current_user.email %> </a></li>
+        <li><%= link_to "Share Video", root_path, class: "navbar-text navbar-link" %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
