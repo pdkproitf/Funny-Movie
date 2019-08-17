@@ -15,7 +15,7 @@
 @import "bootstrap";
 @import "header";
 @import "home";
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,300);
+@import "shares";
 
 @mixin nav_link_hover {
   transition: 0.4s;
@@ -27,7 +27,6 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #f9e8d4;
 }
 
 a {

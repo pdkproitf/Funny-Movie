@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root to: 'shares#index'
 
   resources :shares
   devise_for :users

@@ -1,29 +1,5 @@
-<h1>Shares</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Url</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @shares.each do |share| %>
-      <tr>
-        <td><%= share.title %></td>
-        <td><%= share.description %></td>
-        <td><%= share.url %></td>
-        <td><%= share.user %></td>
-        <td><%= link_to 'Show', share %></td>
-        <td><%= link_to 'Edit', edit_share_path(share) %></td>
-        <td><%= link_to 'Destroy', share, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div id="shares">
+  <% @shares.each do |share| %>
+    <%= render partial: 'share', locals: {share: share} %>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="row share">
+  <div class="col text-right">
+    <div class="embed-responsive embed-responsive-16by9">
+      <%= youtube_video(share.url) %>
+    </div>
+  </div>
+
+  <div class="col text-left">
+    <h2 class="title"><%= share.title %></h2>
+    <h6 class="sharer">Shared By: <%= share.user.email %></h6>
+    <p>
+      <h5>Description:</h5>
+       <%= share.description %>
+     </p>
+  </div>
+</div>
