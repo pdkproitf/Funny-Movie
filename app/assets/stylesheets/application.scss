@@ -1,0 +1,35 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*/
+
+@import "bootstrap";
+@import "header";
+@import "home";
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,300);
+
+@mixin nav_link_hover {
+  transition: 0.4s;
+  color: lighten(#222, 50%);
+  text-decoration: none;
+}
+
+/* Universal styles */
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f9e8d4;
+}
+
+a {
+  color: darken(#e7e7e7, 70%);
+}
