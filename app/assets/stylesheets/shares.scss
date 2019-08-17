@@ -1,7 +1,7 @@
 // Place all the styles related to the Shares controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#shares {
+.shares {
   .share {
     background-color: #fff;
     margin-bottom: 60px;
@@ -15,7 +15,7 @@
     .embed-video {
       height: 250px;
     }
-    .title {
+    .title>a {
       color: red;
     }
     .sharer {
