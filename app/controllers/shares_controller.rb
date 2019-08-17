@@ -25,7 +25,7 @@ class SharesController < ApplicationController
   # POST /shares
   # POST /shares.json
   def create
-    @share = Share.new(share_params)
+    @share = current_user.shares.create(share_params)
 
     respond_to do |format|
       if @share.save
@@ -65,11 +65,11 @@ class SharesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_share
-      @share = Share.find(params[:id])
+      @share ||= current_user.shares.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def share_params
-      params.require(:share).permit(:url, :user_id)
+      params.require(:share).permit(:title, :description, :url)
     end
 end
